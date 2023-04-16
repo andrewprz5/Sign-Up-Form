@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Tilt+Neon&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: #f9fafb;
+}
+
+.side-bar {
+    background-image: url("plant-img.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+    min-height: 100vh;
+}
+
+.side-bar img {
+    width: 20rem;
+}
+
+.logo {
+    height: 16vw;
+    background-color: rgba(0, 0, 0, .5);
+    position: relative;
+    top: 13rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton';
+    letter-spacing: 3px;
+    padding: 20px;
+    overflow: hidden;
+    font-size: 4vw;
+}
+
+.logo img {
+    width: 10vw;
+    max-width: 6rem;
+    max-height: 7rem;
+}
+
+.logo h1 {
+    color: white;
+}
+
+h4 {
+    color: white;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 20px;
+    background-color: #f9fafb;
+    width: 60%;
+}
+
+form {
+    margin-top: 15px;
+}
+
+.fill-out, h2 {
+    display: inline-grid;
+    grid-template-columns: 15rem 15rem;
+    gap: 1rem 10rem;
+    background-color: white;
+    padding: 1rem 10rem 2.5rem 3rem;
+    width: 100vw;
+    box-shadow: 0px 6px 10px -10px;
+}
+
+.fill-out {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+form div div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+input {
+    border-radius: 4px;
+    border: 1px solid #E5E7EB;
+    height: 2rem;
+    width: 20rem;
+    padding: 0.5rem;
+    font-size: clamp(0.75rem, 1.25vw, 1rem);
+    outline: none;
+}
+
+input#pwd, input#c_pwd {
+    border: 1px solid #E5E7EB;
+}
+
+input:focus, input#pwd:focus, input#c_pwd:focus {
+    outline: none;
+    border: 1px solid #0096FF;
+    box-shadow: 2px 3px 6px -3px black;
+}
+
+input:focus:invalid, input#pwd:focus:invalid, input#c_pwd:focus:invalid {
+    border: 1px solid red;
+}
+
+p:first-child, p:nth-child(2), h2, label {
+    font-family: 'Tilt Neon';
+}
+
+label {
+    color: rgb(131, 125, 125);
+}
+
+.info, .submit {
+    padding: 1rem 8rem 1rem 2.5rem;
+}
+
+.info p:first-child {
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-top: 6rem;
+}
+
+.info, h2 {
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.submit {
+    background-color: #f9fafb;
+}
+
+.submit p {
+    font-size: clamp(0.75rem, 0.9rem, 1.5rem);
+}
+
+button {
+    background-color: #596D48;
+    color: white;
+    padding: 0.6rem 3rem;
+    border-radius: 6px;
+    font-family: 'Anton';
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px -4px black;
+    font-size: clamp(0.7rem, 0.8rem, 0.9rem);
+    margin-top: 1rem;
+}
+
+input:focus::after {
+    border: 1px solid red;
+}
+
+a {
+    color: #596D48;
+    text-decoration: none;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Sign-Up Form</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <div class="side-bar">
+        <div class="logo">
+            <img src="odin-lined.jpg" alt="Odin Logo">
+            <h1>ODIN</h1>
+        </div>
+        <h4>Photo by Halie West on Unsplash</h4>
+    </div>
+    <div class="main">
+        <div class="info">
+            <p><strong>This is not a real online service! You know you need something
+            like this in your life to help you realize your deepest dreams.
+            Sign up <i>now</i> to get started.</strong>
+            </p>
+            <p><strong>You <i>know</i> you want to.</strong></p>
+        </div>
+        <form action="http://www.google.com" id="form" method="post" onsubmit="event.preventDefault();">
+            <h2>Let's do this!</h2>
+            <div class="fill-out">
+                <div>
+                    <label for="f_name">First Name</label>
+                    <input type="text" id="f_name" name="first_name" pattern="[A-Za-z]{2,}" required>
+                </div>
+                <div>
+                    <label for="l_name">Last Name</label>
+                    <input type="text" id="l_name" name="last_name" pattern="[A-Za-z]{2,}" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$" required>
+                </div>
+                <div>
+                    <label for="p_number">Phone Number</label>
+                    <input type="tel" id="p_number" name="phone" pattern="[0-9]{10}|[0-9]{3}[-][0-9]{3}[-][0-9]{4}" required>
+                </div>
+                <div id="error">
+                    <label for="pwd">Password</label>
+                    <input type="password" id="pwd" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required>
+                </div>
+                <div>
+                    <label for="c_pwd">Confirm Password</label>
+                    <input type="password" id="c_pwd" name="confirm_pwd" required>
+                </div>
+            </div>
+            <div class="submit">
+                <button type="submit" id="submit">Create Account</button>
+                <p>Already have an account? <a href="">Log In</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
