@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Tilt+Neon&display=swap');
 
+:root {
+    --grey: #E5E7EB;
+    --white: #f9fafb;
+    --darkgreen: #596D48;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +14,7 @@
 
 body {
     display: flex;
-    background-color: #f9fafb;
+    background-color: var(--white);
 }
 
 .side-bar {
@@ -20,14 +26,11 @@ body {
     justify-content: space-between;
     width: 40%;
     min-height: 100vh;
-}
-
-.side-bar img {
-    width: 20rem;
+    width: 100vw;
 }
 
 .logo {
-    height: 16vw;
+    height: auto;
     background-color: rgba(0, 0, 0, .5);
     position: relative;
     top: 13rem;
@@ -37,15 +40,11 @@ body {
     align-items: center;
     font-family: 'Anton';
     letter-spacing: 3px;
-    padding: 20px;
-    overflow: hidden;
-    font-size: 4vw;
+    font-size: 4rem;
 }
 
 .logo img {
-    width: 10vw;
-    max-width: 6rem;
-    max-height: 7rem;
+    width: 8rem;
 }
 
 .logo h1 {
@@ -60,10 +59,9 @@ h4 {
 .main {
     display: flex;
     flex-direction: column;
-    align-items: left;
     justify-content: center;
     gap: 20px;
-    background-color: #f9fafb;
+    background-color: var(--white);
     width: 60%;
 }
 
@@ -93,16 +91,14 @@ form div div {
 
 input {
     border-radius: 4px;
-    border: 1px solid #E5E7EB;
     height: 2rem;
     width: 20rem;
     padding: 0.5rem;
     font-size: clamp(0.75rem, 1.25vw, 1rem);
-    outline: none;
 }
 
-input#pwd, input#c_pwd {
-    border: 1px solid #E5E7EB;
+input, input#pwd, input#c_pwd {
+    border: 1px solid var(--grey);
 }
 
 input:focus, input#pwd:focus, input#c_pwd:focus {
@@ -112,6 +108,10 @@ input:focus, input#pwd:focus, input#c_pwd:focus {
 }
 
 input:focus:invalid, input#pwd:focus:invalid, input#c_pwd:focus:invalid {
+    border: 1px solid red;
+}
+
+input:focus::after {
     border: 1px solid red;
 }
 
@@ -140,7 +140,7 @@ label {
 }
 
 .submit {
-    background-color: #f9fafb;
+    background-color: var(--white);
 }
 
 .submit p {
@@ -148,7 +148,7 @@ label {
 }
 
 button {
-    background-color: #596D48;
+    background-color: var(--darkgreen);
     color: white;
     padding: 0.6rem 3rem;
     border-radius: 6px;
@@ -162,11 +162,7 @@ button {
     margin-top: 1rem;
 }
 
-input:focus::after {
-    border: 1px solid red;
-}
-
 a {
-    color: #596D48;
+    color: var(--darkgreen);
     text-decoration: none;
 }
